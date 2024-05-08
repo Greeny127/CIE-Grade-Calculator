@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+        integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+
+<body>
+    <div class="titleDiv">
+        <h2 id="Title">Grade Calculator</h2>
+    </div>
+
+    <!-- <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Individual')">Individual Component</button>
+        <!-- <button class="tablinks" onclick="openTab(event, 'Combined')">Combined Components</button> /div> -->
+
+    <h3>Individual Component</h3>
+    <div id="Individual">
+
+        <div class="setupDiv">
+
+            <label for="subjectCode" id="subjectCode">Subject Code:</label>
+            <select id="subjectCodeIndividual">
+                <option value="9700">9700</option>>
+                <option value="9701">9701</option>>
+                <option value="9702">9702</option>>
+                <option value="9709">9709</option>>
+            </select>
+
+            <label for="SessionCode">Subject Code:</label>
+            <select id="SessionCodeIndividual">
+                <option value="m">Spring (Feb/March)</option>>
+                <option value="s">Summer (May/June)</option>>
+                <option value="w">Winter (Oct/Nov)</option>>
+            </select>
+
+            <label for="Year">Year:</label>
+            <select id="yearIndividual">
+                <option value="15">2015</option>
+                <option value="16">2016</option>
+                <option value="17">2017</option>
+                <option value="18">2018</option>
+                <option value="19">2019</option>
+                <option value="20">2020</option>
+                <option value="21">2021</option>
+                <option value="22">2022</option>
+                <option value="23">2023</option>
+            </select>
+
+            <button onclick="addPaperCodes()">Get Paper Codes</button>
+        </div>
+
+        <div class="paperDiv">
+            <label for="paperCode">Paper Code:</label>
+            <select id="paperCodeIndividual">
+            </select>
+
+            <label for="Mark">Enter your mark</label>
+            <input type="text" name="marks" id="RawMarksIndividual">
+            <button onclick="calcGrades()">Get Grade</button>
+
+            <h1 id="FinalGradeIndividual"></h1>
+        </div>
+    </div>
+
+    <!-- <div id="Combined" class="tabcontent">
+        <h3>Combined Components</h3>
+        <label for="subjectCodeCombined">Subject Code:</label>
+        <select id="subjectCodeCombined">
+            <option value="subject1">9700</option>>
+            <option value="subject2">9701</option>>
+            <option value="subject3">9702</option>>
+            <option value="subject4">9709</option>>
+        </select>
+        <label for="paperCodesCombined">Paper Codes:</label>
+        <select id="paperCodesCombined1">
+            <!-- Add options here -->
+    <!-- </select> -->
+    <!-- <select id="paperCodesCombined2">
+        <!-- Add options here -->
+    <!-- </select>     </div> -->
+
+    <script src="Scripts/PaperCodes.js"></script>
+    <script src="Scripts/CalculateGrades.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

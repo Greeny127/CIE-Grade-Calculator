@@ -1,0 +1,52 @@
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+}
+
+body {
+  background: rgb(46, 46, 46);
+}
+
+#Title {
+  font-size: 7vh;
+  background: rgb(156, 255, 196);
+  background: radial-gradient(
+    circle,
+    rgb(156, 255, 196) 0%,
+    rgb(167, 255, 202) 23%,
+    rgb(255, 211, 116) 73%,
+    rgb(255, 154, 157) 100%
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+h3 {
+  font-size: 3.2vh;
+  text-align: center;
+}
+
+#Individual {
+  background: rgb(97, 97, 97);
+  width: 50%;
+  margin: 0 auto;
+  padding: 1%;
+  border-radius: 17px;
+}
+
+.setupDiv {
+  font-size: 3vh;
+  font-weight: bold;
+  text-align: center;
+  display: flexbox;
+}
+
+.paperDiv {
+  margin-top: 5vh;
+  font-size: 3vh;
+  font-weight: bold;
+  text-align: center;
+  display: flexbox;
+}
